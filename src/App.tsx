@@ -17,10 +17,12 @@ function App() {
 
         <main className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {LINKS.map((link) => (
-            <article
+            <a
               key={link.href}
-              className="group overflow-hidden rounded-[2rem] border cursor-pointer border-white/80 bg-white/90 p-6 shadow-[0_20px_80px_-40px_rgba(251,113,133,0.25)] transition duration-300 hover:-translate-y-1"
-              onClick={() => window.open(link.href, "_blank")}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 p-6 shadow-[0_20px_80px_-40px_rgba(251,113,133,0.25)] transition duration-300 hover:-translate-y-1"
             >
               <div className="mb-5 flex h-44 items-center justify-center rounded-[1.75rem] bg-gradient-to-br from-rose-200 via-amber-200 to-sky-200 text-4xl text-rose-900 shadow-inner">
                 ✨
@@ -34,7 +36,7 @@ function App() {
                   {link.label}
                 </span>
               </div>
-            </article>
+            </a>
           ))}
         </main>
       </div>

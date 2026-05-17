@@ -24,8 +24,16 @@ function App() {
               rel="noopener noreferrer"
               className="group block overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 p-6 shadow-[0_20px_80px_-40px_rgba(251,113,133,0.25)] transition duration-300 hover:-translate-y-1"
             >
-              <div className="mb-5 flex h-44 items-center justify-center rounded-[1.75rem] bg-gradient-to-br from-rose-200 via-amber-200 to-sky-200 text-4xl text-rose-900 shadow-inner">
-                ✨
+              <div className="mb-5 flex h-44 items-center justify-center overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-rose-200 via-amber-200 to-sky-200 text-4xl text-rose-900 shadow-inner">
+                {link.thumbnail ? (
+                  <img
+                    src={link.thumbnail}
+                    alt={link.title}
+                    className="h-full w-full object-contain p-1"
+                  />
+                ) : (
+                  <span>✨</span>
+                )}
               </div>
               <h2 className="text-2xl font-semibold text-rose-900">
                 {link.title}

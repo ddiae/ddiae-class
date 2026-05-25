@@ -27,5 +27,12 @@ export const LINKS: Link[] = [
     href: "https://computer-input-practice.vercel.app/",
     label: "1-2학년",
     thumbnail: "/thumbnails/input-practice.png"
+  },
+  {
+    title: "블록코딩 시작하기",
+    description: "블록 코딩으로 햄버거를 만들어요.",
+    href: "https://burger-block.vercel.app/",
+    label: "1-2학년",
+    thumbnail: "/thumbnails/burger-block.png"
   }
 ];
